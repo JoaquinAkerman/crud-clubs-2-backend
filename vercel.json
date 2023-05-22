@@ -1,18 +1,18 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "server.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-      { "src": "/clubs", "dest": "server.js" },
-      { "src": "/clubs/:id", "dest": "server.js" },
-      { "src": "/clubs/public/static/images/:filename", "dest": "server.js" },
-      { "src": "/clubs/new", "dest": "server.js" },
-      { "src": "/clubs/edit/:id", "dest": "server.js" },
-      { "src": "/clubs/delete/:id", "dest": "server.js" },
-      { "src": "/clubs/upload/:id", "dest": "server.js" },
-      { "src": "/clubs/reset-clubs", "dest": "server.js" },
-      { "src": "/(.*)", "dest": "server.js" }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [{ "src": "server.js", "use": "@vercel/node" }],
+  "routes": [
+    { "src": "/clubs", "dest": "server.js" },
+    { "src": "/clubs/:id", "dest": "server.js" },
+    {
+      "src": "/clubs/public/static/images/(.*)",
+      "dest": "https://raw.githubusercontent.com/JoaquinAkerman/crud-clubs-2-backend/main/public/static/images/$1"
+    },
+    { "src": "/clubs/new", "dest": "server.js" },
+    { "src": "/clubs/edit/:id", "dest": "server.js" },
+    { "src": "/clubs/delete/:id", "dest": "server.js" },
+    { "src": "/clubs/upload/:id", "dest": "server.js" },
+    { "src": "/clubs/reset-clubs", "dest": "server.js" },
+    { "src": "/(.*)", "dest": "server.js" }
+  ]
+}
