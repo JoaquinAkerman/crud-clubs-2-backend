@@ -1,5 +1,7 @@
 # crud-clubs-2-backend
 
+API: https://crud-clubs-2-backend-gv3ty43hi-joaquinluis.vercel.app/clubs
+
 #For starting the server run the following command
 
 || npm run start
