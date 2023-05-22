@@ -56,10 +56,12 @@ app.get('/clubs/:id', (req, res) => {
 });
 
 // Setting up the route to display the images of each club
+
 app.get('/clubs/public/static/images/:filename', async (req, res) => {
   try {
     const { filename } = req.params;
-    await res.sendFile(filename, { root: './public/static/images' });
+    const filePath = path.join(__dirname, 'public', 'static', 'images', filename);
+    await res.sendFile(filePath);
   } catch (err) {
     const status = err.status || 500;
     const body = err.message || 'Something went wrong';
