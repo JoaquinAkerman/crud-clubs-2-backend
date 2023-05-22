@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/clubs", "destination": "/server.js" },
+    { "source": "/clubs/:id", "destination": "/server.js" },
+    {
+      "source": "/clubs/public/static/images/:filename",
+      "destination": "/server.js"
+    },
+    { "source": "/clubs/new", "destination": "/server.js" },
+    { "source": "/clubs/edit/:id", "destination": "/server.js" },
+    { "source": "/clubs/delete/:id", "destination": "/server.js" },
+    { "source": "/clubs/upload/:id", "destination": "/server.js" },
+    { "source": "/clubs/reset-clubs", "destination": "/server.js" }
+  ],
+  "version": 2
+}
