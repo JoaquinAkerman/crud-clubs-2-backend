@@ -7,7 +7,7 @@ module.exports = {
   extends: ['airbnb-base'],
   plugins: [],
   rules: {
-    'no-console': 'warn',
+    'no-console': 'off',
     'no-unused-vars': 'warn',
     'linebreak-style': ['error', 'windows'],
     quotes: ['error', 'single'],
